@@ -387,8 +387,6 @@ other example `curl -X DELETE http://127.0.0.1:5000/cars/1 `
 
 ```
 
-```
-
 ## Deployement N/A
 
 ## Authors
@@ -398,4 +396,3 @@ Randriamananjara Nirinasoa Herilanto
 ## Acknowledgements
 
 Full-Stack-03 Teams Students, Coachs
-```
