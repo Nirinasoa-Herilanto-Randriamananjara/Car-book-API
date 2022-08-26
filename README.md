@@ -23,7 +23,7 @@ backend
 
 To execute this application, you should be inside our backend folder in your terminal command then you can follow this command:
 
-````
+```
 set FLASK_APP=flaskr
 set FLASK_ENV=development //to enable DEBUG mode
 flask run
@@ -32,14 +32,16 @@ flask run
 By default, this application run at `http://127.0.0.1:5000/`
 
 ### Testing API
+
 In order to run the test, please follow this command:
-  - Make sure you have an other database:
-      - psql command
-        ```
-          drop database carbook_test;
-          create database carbook_test;
-        ```
-  - Then you can run `python test_flaskr.py`
+
+- Make sure you have an other database:
+  - psql command
+    ```
+      drop database carbook_test;
+      create database carbook_test;
+    ```
+- Then you can run `python test_flaskr.py`
 
 ## API Reference
 
@@ -73,6 +75,7 @@ The API will return four(04) errors types when request fail:
 #### GET /cars
 
 - General:
+
   - Returns a lists of cars objects with success value and total numbers of cars.
   - Results are paginated in groups of 10. Include a request argument to choose page number, by default start from 1.
     Example:`curl http://127.0.0.1:5000/cars?page=2` or `curl http://localhost:5000/cars?page=2`
@@ -151,6 +154,7 @@ The API will return four(04) errors types when request fail:
 ```
 
 #### GET /cars/{car_id}
+
 - General: Return single car by id given and return an success value
 - Example: `curl http://127.0.0.1:5000/cars/2` or `curl http://localhost:5000/cars/2`
 
@@ -382,7 +386,8 @@ other example `curl -X DELETE http://127.0.0.1:5000/cars/1 `
 }
 
 ```
-````
+
+```
 
 ## Deployement N/A
 
@@ -393,3 +398,4 @@ Randriamananjara Nirinasoa Herilanto
 ## Acknowledgements
 
 Full-Stack-03 Teams Students, Coachs
+```
