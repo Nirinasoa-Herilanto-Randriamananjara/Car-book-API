@@ -28,7 +28,29 @@ def create_app(test_config=None):
         return jsonify({
             "message": "Welcome to Car book API"
         })
-    
+        
+    # PROBLEME OF QUERY PARAMETERS
+    @app.route('/login', methods=['POST', 'GET'])
+    def user_login():
+        username = request.args.get('username', '', type=str)
+        password = request.args.get('password', 0000, type=int)
+        
+        # http://localhost:5000/login?username=nirinasoa&password=12345
+        # the second value in parameters is None
+        # response 
+        # {
+        # "password": 0,
+        # "username": "nirinasoa"
+        # }
+        
+        print(username)
+        print(password)
+
+        return jsonify({
+            "username": username,
+            "password": password
+        })
+        
     @app.route('/cars')
     def retrieve_cars():
         page = request.args.get('page', 1, type=int)
